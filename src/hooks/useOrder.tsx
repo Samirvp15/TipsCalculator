@@ -9,9 +9,12 @@ export default function UseOrder(){
 
 
     const addItem = (item: MenuItem) =>{
-        console.log(item)
+       
+        const newItem: OrderItem = {...item, quantity: 1}
+        setOrder([...order, newItem])
     }
 
+    console.log(order)
 
     return {
         addItem
