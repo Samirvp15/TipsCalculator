@@ -6,6 +6,7 @@ export default function UseOrder() {
 
     //Custom Hook
     const [order, setOrder] = useState<OrderItem[]>([])
+    const [tip, setTip] = useState(0)
 
 
     const addItem = (item: MenuItem) => {
@@ -31,12 +32,19 @@ export default function UseOrder() {
     }
 
 
+    const placeOrder = ()=>{
+        setOrder([])
+        setTip(0)
+    }
 
 
 
     return {
         order,
+        tip,
+        setTip,
         addItem,
-        removeItem
+        removeItem,
+        placeOrder
     }
 }
