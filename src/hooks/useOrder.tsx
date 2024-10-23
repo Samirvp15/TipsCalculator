@@ -25,9 +25,8 @@ export default function UseOrder(){
        
     }
 
-    console.log(order)
-
     return {
+        order,
         addItem
     }
 }
